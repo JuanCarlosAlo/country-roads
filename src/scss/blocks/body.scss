@@ -1,7 +1,9 @@
 html {
 }
 body {
-  background-image: url(../assets/images/anubis.jpg);
-  background-size: contain;
-  filter: invert(1);
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--light-color);
+  background-color: var(--dark-background);
+  font-family: sans-serif;
 }

@@ -6,10 +6,48 @@
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CAMBIA EL TITLE!!! -->
-    <title>Vite Template</title>
+    <title>Info of the world</title>
   </head>
   <body>
-    <img src="assets/images/anubis.jpg" width="500px" alt="anubis" />
+    <header class="header">
+      <h1 class="header__title">Info of the world</h1>
+      <div class="light-mode">
+        <img class="light-mode__img" src="assets/images/moon-solid.svg" alt="">
+        <p class="light-mode-text">Light Mode</p>
+      </div>
+    </header>
+    <main class="main">
+      <form id="form" class="form">
+        <div class="input__container">
+          
+          <input class="input__element" type="text" name="country" placeholder="Search for a country"><img class="input__img" src="assets/images/magnifying-glass-solid.svg" alt="">
+
+          <select name="region" id="region">
+            <option value="default">Select by Region</option>
+            <option value="africa">Africa</option>
+            <option value="america">America</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
+          </select>
+        
+        </div>
+
+        <div id="cards-container" class="cards__container">
+          <div class="card">
+            <img class="card__flag" src="https://flagcdn.com/de.svg" alt="">
+            <div class="card__info">
+              <div class="card__info--title">Germany</div>
+              <div class="card__info--population">81.000.000</div>
+              <div class="card__info--region">Europe</div>
+              <div class="card__info--capital">Berlin</div>
+            </div>
+            
+          </div>
+        </div>
+
+      </form>
+    </main>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
