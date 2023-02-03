@@ -20,7 +20,7 @@
       <form id="form" class="form">
         <div class="input__container">
           
-          <input class="input__element" type="text" name="country" placeholder="Search for a country"><img class="input__img" src="assets/images/magnifying-glass-solid.svg" alt="">
+          <input id="input-country" class="input__element" type="text" name="country" placeholder="Search for a country"><img class="input__img" src="assets/images/magnifying-glass-solid.svg" alt="">
 
           <select name="region" id="region">
             <option value="default">Select by Region</option>
@@ -30,11 +30,11 @@
             <option value="europe">Europe</option>
             <option value="oceania">Oceania</option>
           </select>
-        
+        </form>
         </div>
 
         <div id="cards-container" class="cards__container">
-          <div class="card">
+          <!-- <div class="card">
             <img class="card__flag" src="https://flagcdn.com/de.svg" alt="">
             <div class="card__info">
               <div class="card__info--title">Germany</div>
@@ -43,11 +43,34 @@
               <div class="card__info--capital">Berlin</div>
             </div>
             
-          </div>
+          </div> -->
         </div>
 
-      </form>
+     
     </main>
+    <div id="modal" class="modal ">
+      <div id="modal-container" class="modal__container">
+        <img id="cross-icon" class="cross" src="assets/images/cross.svg" alt="">
+        <div class="modal__content">
+          <div class="modal__img-container">
+            
+            <div class="modal__img-img">
+              <img id="modal-img" class="modal-img" src="" alt="">
+            </div>
+         
+           </div>
+
+          </div>
+          <div class="modal__info">
+            <h2 id="modal-title" class="modal__title">
+            </h2>
+            <p id="modal-text" class="text text--padding-bottom"></p>
+         
+          </div>
+          
+        </div>
+      </div>
+    </div>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

@@ -1,48 +1,107 @@
-import { fetchDataNameCountry, fetchDataNameRegion } from '../js/utility';
+import { fetchData } from "../js/utility";
 
-const cardsContainer = document.getElementById('cards-container');
+const cardsContainer = document.getElementById("cards-container");
 
-const createCards = async region => {
-  cardsContainer.innerHTML = '';
+const createCardElement = () => {
+  const card = document.createElement("div");
+  card.classList.add("card");
+  return card;
+};
+
+const createCardImg = (element) => {
+  const cardImg = document.createElement("img");
+  cardImg.classList.add("card__flag");
+  cardImg.src = element.flags.svg;
+  return cardImg;
+};
+
+const createCardInfo = () => {
+  const cardInfo = document.createElement("div");
+  cardInfo.classList.add("card__info");
+  return cardInfo;
+};
+
+const createCardTitle = (element) => {
+  const cardTitle = document.createElement("div");
+  cardTitle.classList.add("card__info--title");
+  cardTitle.textContent = element.name.common;
+  return cardTitle;
+};
+
+const createCardPopulation = (element) => {
+  const cardPopulation = document.createElement("div");
+  cardPopulation.classList.add("card__info--region");
+  cardPopulation.textContent = "Population: " + element.population;
+  return cardPopulation;
+};
+
+const createCardRegion = (element) => {
+  const cardRegion = document.createElement("div");
+  cardRegion.classList.add("card__info--region");
+  cardRegion.textContent = "Region: " + element.region;
+  return cardRegion;
+};
+
+const createCardCapital = (element) => {
+  const cardCapital = document.createElement("div");
+  cardCapital.classList.add("card__info--capital");
+  if (element.capital) {
+    cardCapital.textContent = "Capital: " + element.capital[0];
+  } else {
+    cardCapital.textContent = "Capital: None";
+  }
+
+  return cardCapital;
+};
+
+const createCardsByRegion = async (region) => {
+  cardsContainer.innerHTML = "";
   const fragment = document.createDocumentFragment();
-  const data = await fetchDataNameRegion(
+  const dataRegion = await fetchData(
     `https://restcountries.com/v3.1/region/${region}`
   );
-  data.forEach(element => {
-    const card = document.createElement('div');
-    card.classList.add('card');
 
-    const cardImg = document.createElement('img');
-    cardImg.classList.add('card__flag');
-    cardImg.src = element.flags.svg;
+  dataRegion.forEach((element) => {
+    const cardElement = createCardElement();
 
-    const cardInfo = document.createElement('div');
-    cardInfo.classList.add('card__info');
+    const cardInfoElement = createCardInfo();
 
-    const cardTitle = document.createElement('div');
-    cardTitle.classList.add('card__info--title');
-    cardTitle.textContent = element.name.common;
-
-    const cardPopulation = document.createElement('div');
-    cardPopulation.classList.add('card__info--region');
-    cardPopulation.textContent = element.population;
-
-    const cardRegion = document.createElement('div');
-    cardRegion.classList.add('card__info--region');
-    cardRegion.textContent = element.region;
-
-    const cardCapital = document.createElement('div');
-    cardCapital.classList.add('card__info--capital');
-    cardCapital.textContent = element.capital[0];
-
-    cardInfo.append(cardTitle, cardPopulation, cardRegion, cardCapital);
-    card.append(cardImg, cardInfo);
-    fragment.append(card);
+    cardInfoElement.append(
+      createCardTitle(element),
+      createCardPopulation(element),
+      createCardRegion(element),
+      createCardCapital(element)
+    );
+    cardElement.append(createCardImg(element), cardInfoElement);
+    fragment.append(cardElement);
   });
 
   cardsContainer.append(fragment);
-
-  console.log(data);
 };
 
-export { createCards };
+const createCardsByCountry = async (country) => {
+  cardsContainer.innerHTML = "";
+  const fragment = document.createDocumentFragment();
+  const dataRegion = await fetchData(
+    `https://restcountries.com/v3.1/name/${country}`
+  );
+
+  dataRegion.forEach((element) => {
+    const cardElement = createCardElement();
+
+    const cardInfoElement = createCardInfo();
+
+    cardInfoElement.append(
+      createCardTitle(element),
+      createCardPopulation(element),
+      createCardRegion(element),
+      createCardCapital(element)
+    );
+    cardElement.append(createCardImg(element), cardInfoElement);
+    fragment.append(cardElement);
+  });
+
+  cardsContainer.append(fragment);
+};
+
+export { createCardsByRegion, createCardsByCountry, cardsContainer };
