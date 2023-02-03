@@ -16,9 +16,8 @@ regionSelect.addEventListener('change', e => {
   createCardsByRegion(e.target.value);
 });
 
-addEventListener('keyup', e => {
-  console.log(inputCountry.value);
-  createCardsByCountry(inputCountry.value);
+inputCountry.addEventListener('submit', e => {
+  createCardsByCountry(e.target.value);
 });
 
 cardsContainer.addEventListener('click', e => {
