@@ -48,24 +48,36 @@
 
      
     </main>
-    <div id="modal" class="modal ">
-      <div id="modal-container" class="modal__container">
+    <div id="modal" class="modal">
+      <div id="modal-container" class="modal__container modal__container--show">
         <img id="cross-icon" class="cross" src="assets/images/cross.svg" alt="">
-        <div class="modal__content">
-          <div class="modal__img-container">
-            
-            <div class="modal__img-img">
-              <img id="modal-img" class="modal-img" src="" alt="">
-            </div>
-         
-           </div>
 
-          </div>
-          <div class="modal__info">
+          <div class="modal__img-container">
+    
+              <img id="modal-img" class="modal-img" src="" alt="">
+
+           </div>
+           <div id="modal__info" class="modal__info">
             <h2 id="modal-title" class="modal__title">
             </h2>
-            <p id="modal-text" class="text text--padding-bottom"></p>
-         
+            <div class="modal-text">
+              <div class="text text--padding-bottom">
+                <p class="text" id="modal-native-name">Native name: <span></span></p>
+                <p class="text" id="modal-population">Population: <span></span></p>
+                <p class="text" id="modal-region">Region: <span></span></p>
+                <p class="text" id="modal-sub-region">Sub Region: <span></span></p>
+                <p class="text" id="modal-capital">cAPITAL: <span></span></p>
+            </div>
+            <div  class="text text--padding-bottom">
+              <p class="text" id="modal-top-level">Top level: <span></span></p>
+              <p class="text" id="modal-currencies">Currencies: <span></span></p>
+              <p class="text" id="modal-language">Language: <span></span></p>
+      
+          </div>
+            </div>
+
+
+          
           </div>
           
         </div>
