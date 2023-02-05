@@ -8,10 +8,10 @@
     <!-- CAMBIA EL TITLE!!! -->
     <title>Info of the world</title>
   </head>
-  <body>
+  <body class="body">
     <header class="header">
       <h1 class="header__title">Info of the world</h1>
-      <div class="light-mode">
+      <div id="light-mode" class="light-mode">
         <img class="light-mode__img" src="assets/images/moon-solid.svg" alt="">
         <p class="light-mode-text">Light Mode</p>
       </div>
@@ -34,16 +34,7 @@
         </div>
 
         <div id="cards-container" class="cards__container">
-          <!-- <div class="card">
-            <img class="card__flag" src="https://flagcdn.com/de.svg" alt="">
-            <div class="card__info">
-              <div class="card__info--title">Germany</div>
-              <div class="card__info--population">81.000.000</div>
-              <div class="card__info--region">Europe</div>
-              <div class="card__info--capital">Berlin</div>
-            </div>
-            
-          </div> -->
+         
         </div>
 
      
@@ -54,28 +45,34 @@
 
           <div class="modal__img-container">
     
-              <img id="modal-img" class="modal-img" src="" alt="">
+              <img id="modal-img" class="modal__img" src="" alt="">
 
            </div>
            <div id="modal__info" class="modal__info">
             <h2 id="modal-title" class="modal__title">
             </h2>
             <div class="modal-text">
-              <div class="text text--padding-bottom">
+              <div class="text--padding-bottom">
                 <p class="text" id="modal-native-name">Native name: <span></span></p>
                 <p class="text" id="modal-population">Population: <span></span></p>
                 <p class="text" id="modal-region">Region: <span></span></p>
                 <p class="text" id="modal-sub-region">Sub Region: <span></span></p>
-                <p class="text" id="modal-capital">cAPITAL: <span></span></p>
-            </div>
-            <div  class="text text--padding-bottom">
+                <p class="text" id="modal-capital">Capital: <span></span></p>
+              </div>
+              <div  class="text--padding-bottom">
               <p class="text" id="modal-top-level">Top level: <span></span></p>
               <p class="text" id="modal-currencies">Currencies: <span></span></p>
               <p class="text" id="modal-language">Language: <span></span></p>
       
+              </div>
+              
           </div>
-            </div>
-
+          <p class="text" >Border Countries:</p>
+          <div class="modal__border" id="modal-border">
+            
+            
+          </div>
+          
 
           
           </div>

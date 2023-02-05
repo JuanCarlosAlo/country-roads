@@ -1,9 +1,17 @@
 html {
 }
 body {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   color: var(--light-color);
   background-color: var(--dark-background);
   font-family: sans-serif;
+}
+
+.dark-mode{
+  --dark-color: rgb(187, 187, 206);
+  --dark-background: rgb(223, 231, 237);
+  --light-color: rgb(39, 40, 41);
+  --modal-background:rgba(255, 255, 255, 0.897);
 }
