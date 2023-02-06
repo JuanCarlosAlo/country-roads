@@ -44,16 +44,23 @@ const createCardTitle = (element) => {
   return cardTitle;
 };
 
+const reverseString = (str) => {
+  return str.split("").reverse().join("");
+};
+
 const formatNumber = (number) => {
   let numberToString = String(number);
   let numberWithFormat = "";
   for (let index = numberToString.length - 1; index >= 0; index--) {
-    const checkPosition = numberToString.length - index;
-    if (checkPosition % 3 === 0 && checkPosition !== 1) numberWithFormat += ".";
+    const checkPosition = numberToString.length - index - 1;
+
+    if (checkPosition % 3 === 0 && checkPosition !== 0) {
+      numberWithFormat += ".";
+    }
     numberWithFormat += numberToString[index];
   }
 
-  return numberWithFormat;
+  return reverseString(numberWithFormat);
 };
 
 const createCardPopulation = (element) => {
