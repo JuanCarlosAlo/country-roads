@@ -1,6 +1,6 @@
 # Info of the world
 
-![Imagen del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/pokemon-cards/main/src/assets/images/readme-.jpg)
+![Imagen del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/country-roads/main/src/assets/images/readme-1.jpg)
 
 ## Ejemplo en vivo
 
@@ -29,15 +29,15 @@ Si quieres echar un vistazo al proyecto, te recomiendo:
 
 ## Ordenador
 
-![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/pokemon-cards/main/src/assets/images/readme-.jpg)
+![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/country-roads/main/src/assets/images/readme-3.jpg)
 
 ## Estados activos
 
-![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/pokemon-cards/main/src/assets/images/readme-2.jpg)
+![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/country-roads/main/src/assets/images/readme-2.jpg)
 
 ## Parte de Codigo
 
-![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/pokemon-cards/main/src/assets/images/readme-3.jpg)
+![Captura del proyecto](https://raw.githubusercontent.com/JuanCarlosAlo/country-roads/main/src/assets/images/readme-4.jpg)
 
 ## Autor
 
