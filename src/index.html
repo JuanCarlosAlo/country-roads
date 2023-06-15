@@ -1,85 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- PON UN FAVICON!!! -->
-    <link rel="icon" type="image/svg+xml" href="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CAMBIA EL TITLE!!! -->
-    <title>Info of the world</title>
-  </head>
-  <body class="body">
-    <header class="header">
-      <h1 class="header__title">Info of the world</h1>
-      <div id="light-mode" class="light-mode">
-        <img class="light-mode__img" src="assets/images/moon-solid.svg" alt="">
-        <p class="light-mode-text">Light Mode</p>
-      </div>
-    </header>
-    <main class="main">
-      <form id="form" class="form">
-        <div class="input__container">
-          
-          <input id="input-country" class="input__element" type="text" name="country" placeholder="Search for a country"><img class="input__img" src="assets/images/magnifying-glass-solid.svg" alt="">
 
-          <select name="region" id="region">
-            <option value="default">Select by Region</option>
-            <option value="africa">Africa</option>
-            <option value="america">America</option>
-            <option value="asia">Asia</option>
-            <option value="europe">Europe</option>
-            <option value="oceania">Oceania</option>
-          </select>
-        </form>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <!-- PON UN FAVICON!!! -->
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- CAMBIA EL TITLE!!! -->
+  <title>Info of the world</title>
+</head>
 
-        <div id="cards-container" class="cards__container">
-         
-        </div>
-
-     
-    </main>
-    <div id="modal" class="modal">
-      <div id="modal-container" class="modal__container modal__container--show">
-        <img id="cross-icon" class="cross" src="assets/images/cross.svg" alt="">
-
-          <div class="modal__img-container">
-    
-              <img id="modal-img" class="modal__img" src="" alt="">
-
-           </div>
-           <div id="modal__info" class="modal__info">
-            <h2 id="modal-title" class="modal__title">
-            </h2>
-            <div class="modal-text">
-              <div class="text--padding-bottom">
-                <p class="text" id="modal-native-name">Native name: <span></span></p>
-                <p class="text" id="modal-population">Population: <span></span></p>
-                <p class="text" id="modal-region">Region: <span></span></p>
-                <p class="text" id="modal-sub-region">Sub Region: <span></span></p>
-                <p class="text" id="modal-capital">Capital: <span></span></p>
-              </div>
-              <div  class="text--padding-bottom">
-              <p class="text" id="modal-top-level">Top level: <span></span></p>
-              <p class="text" id="modal-currencies">Currencies: <span></span></p>
-              <p class="text" id="modal-language">Language: <span></span></p>
-      
-              </div>
-              
-          </div>
-          <p class="text" >Border Countries:</p>
-          <div class="modal__border" id="modal-border">
-            
-            
-          </div>
-          
-
-          
-          </div>
-          
-        </div>
-      </div>
+<body class="body">
+  <header class="header">
+    <h1 class="header__title">Info of the world</h1>
+    <div id="light-mode" class="light-mode">
+      <img class="light-mode__img" src="assets/images/moon-solid.svg" alt="">
+      <p class="light-mode-text">Light Mode</p>
     </div>
-    <script type="module" src="./js/index.js"></script>
-  </body>
+  </header>
+  <main class="main">
+    <form id="form" class="form">
+      <div class="input__container">
+
+        <input id="input-country" class="input__element" type="text" name="country"
+          placeholder="Search for a country"><img class="input__img" src="assets/images/magnifying-glass-solid.svg"
+          alt="">
+
+        <select name="region" id="region">
+          <option value="default">Select by Region</option>
+          <option value="africa">Africa</option>
+          <option value="america">America</option>
+          <option value="asia">Asia</option>
+          <option value="europe">Europe</option>
+          <option value="oceania">Oceania</option>
+        </select>
+    </form>
+    </div>
+
+    <div id="cards-container" class="cards__container">
+
+    </div>
+
+
+  </main>
+  <div id="modal" class="modal">
+    <div id="modal-container" class="modal__container modal__container--show">
+      <img id="cross-icon" class="cross" src="assets/images/cross.svg" alt="">
+
+      <div class="modal__img-container">
+
+        <img id="modal-img" class="modal__img" src="" alt="">
+
+      </div>
+      <div id="modal__info" class="modal__info">
+        <h2 id="modal-title" class="modal__title">
+        </h2>
+        <div class="modal-text">
+          <div class="text--padding-bottom">
+            <p class="text" id="modal-native-name">Native name: <span></span></p>
+            <p class="text" id="modal-population">Population: <span></span></p>
+            <p class="text" id="modal-region">Region: <span></span></p>
+            <p class="text" id="modal-sub-region">Sub Region: <span></span></p>
+            <p class="text" id="modal-capital">Capital: <span></span></p>
+          </div>
+          <div class="text--padding-bottom">
+            <p class="text" id="modal-top-level">Top level: <span></span></p>
+            <p class="text" id="modal-currencies">Currencies: <span></span></p>
+            <p class="text" id="modal-language">Language: <span></span></p>
+
+          </div>
+
+        </div>
+        <p class="text">Border Countries:</p>
+        <div class="modal__border" id="modal-border">
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <script type="module" src="./js/index.js"></script>
+</body>
+
 </html>
